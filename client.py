@@ -1,7 +1,7 @@
 from socket import*
-text=raw_input("Enter the message : ")
+text=raw_input("Enter 'Hi' : ")
 fd=socket(AF_INET,SOCK_DGRAM)
 fd.sendto(str(text),('127.0.0.1',7000))
 resp=fd.recvfrom(100)
 a= list(resp)
-print a[0]
+print 'Response from server : ' , a[0]
